@@ -23,3 +23,10 @@
     </div>
   </nav>
 </header>
+<div class="container">
+  <% if user_signed_in? %>
+  <div class="d-flex align-items-center justify-content-center">
+    <%= render "search/search" %>
+    <% end %>
+  </div>
+</div>
