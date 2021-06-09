@@ -4,6 +4,8 @@ Rails.application.routes.draw do
   root 'homes#top'
   get "search" => "search#search"
   get 'home/about' => 'homes#about'
+  #グループ
+  resources :groups, only: [:index, :new, :create, :edit, :update, :show]
   resources :users,only: [:show,:index,:edit,:update] do
     resource :relationships, only: [:create, :destroy]
     get "followings" => "relationships#followings", as: "followings"
