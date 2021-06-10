@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_06_09_105725) do
+ActiveRecord::Schema.define(version: 2021_06_10_093421) do
 
   create_table "book_comments", force: :cascade do |t|
     t.text "comment"
@@ -51,6 +51,7 @@ ActiveRecord::Schema.define(version: 2021_06_09_105725) do
     t.text "introduction"
     t.string "group_image_id"
     t.integer "owner"
+    t.integer "user_id"
     t.index ["name"], name: "index_groups_on_name", unique: true
   end
 
